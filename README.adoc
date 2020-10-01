@@ -1,0 +1,8 @@
+= Spring Boot EnableAutoConfiguration bug
+
+Application used for reproducing the `EnableAutoConfiguration` issue where the annotation that
+is applied to the parent class is missed, although it has the `@Inherited` meta annotation.
+
+In this particular case, we define a parent class to set all the abstract configuration. Child test
+classes will extend this master class and, supposedly, the parent class configuration will be
+inherited.
